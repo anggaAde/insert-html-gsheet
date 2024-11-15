@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Input Tidakan</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"rel="nofollow" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxt47p6jF1OH66EdsEoCswV3JW6qLXTkqaFulJ0dguredER2gxSe7RN6Pgl2v8yBxM/exec'
+    const form = document.forms['input-tindakan']
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</head>
+<style type="text/css">
+  body{background-color:#FFEBEE}.card{width:400px;background-color:#fff;border:none;border-radius: 12px}label.radio{cursor: pointer;width: 100%}label.radio input{position: absolute;top: 0;left: 0;visibility: hidden;pointer-events: none}label.radio span{padding: 7px 14px;border: 2px solid #eee;display: inline-block;color: #039be5;border-radius: 10px;width: 100%;height: 48px;line-height: 27px}label.radio input:checked+span{border-color: #039BE5;background-color: #81D4FA;color: #fff;border-radius: 9px;height: 48px;line-height: 27px}.form-control{margin-top: 10px;height: 48px;border: 2px solid #eee;border-radius: 10px}.form-control:focus{box-shadow: none;border: 2px solid #039BE5}.agree-text{font-size: 12px}.terms{font-size: 12px;text-decoration: none;color: #039BE5}.confirm-button{height: 50px;border-radius: 10px}.form-select{margin-top: 10px;height: 48px;border: 2px solid #eee;border-radius: 10px}.form-select:focus{box-shadow: none;border: 2px solid #039BE5}
+</style>
+<body>
+
+  <form name="tes2---jamiewilson">
+    <div class="container mt-5 mb-5 d-flex justify-content-center">
+      <div class="card px-1 py-4">
+        <div class="card-body">
+          <h5 class="card-title mb-3 " align="center">Sunshine Mom and Baby Spa</h5>
+          <h6 class="card-title mb-3 " align="center">Input Tindakan</h6>
+          <div class="d-flex flex-row"> <label class="radio mr-1"> <input type="radio" name="add" value="anz" checked> <span> <i class="fa fa-user"></i> Anz CMK </span> </label> <label class="radio"> <input type="radio" name="add" value="add"> <span> <i class="fa fa-plus-circle"></i> Add </span> </label> </div>
+          <h6 class="information mt-4">Please provide following information about Anz CMK</h6>
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="form-group"><input class="form-control" type="text" placeholder="Nama Pasien" name="nama"> </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="form-group">
+                <div class="input-group"> <input class="form-control" type="text" placeholder="Tindakan" name="tindakan"> </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="form-group">
+                <div class="input-group">
+                  <!-- <input class="form-control" type="text" placeholder="Tindakan" name="tindakan"> -->
+                  <label class="form-control" disabled readonly>Petugas</label>
+                  <select class="form-select">
+                    <option selected>pilih salah satu</option>
+                    <option value="1">Anis</option>
+                    <option value="2">Mulik</option>
+                    <option value="3">Neni</option>
+                    <option value="4">Siroh</option>
+                    <option value="5">TH</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="form-group">
+                <div class="input-group"> <input class="form-control" type="text" placeholder="harga" name="harga"> </div>
+              </div>
+            </div>
+          </div>
+          <div class=" d-flex flex-column text-center px-5 mt-3 mb-3"> <small class="agree-text">pastikan semua isian telah sesuai sebelum di simpan</small> <a href="#" class="terms">Terms & Conditions</a> </div> <button class="btn btn-primary btn-block confirm-button" type="submit">SIMPAN</button>
+        </div>
+      </div>
+    </div>
+  </form>
+
+</body>
+</html>
